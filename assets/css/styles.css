@@ -411,6 +411,9 @@ img {
 .app__img {
   width: 230px;
   justify-self: center;
+  height: 75%;
+  object-fit: cover;
+  clip-path: circle(50% at center);
 }
 
 /*========== CONTACT ==========*/
@@ -491,6 +494,9 @@ img {
   .app__img {
     width: 380px;
     order: -1;
+    height: 75%;
+    object-fit: cover;
+    clip-path: circle(50% at center);
   }
 
   .contact__container {
