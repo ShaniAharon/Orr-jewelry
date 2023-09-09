@@ -1,4 +1,4 @@
-/*==================== SHOW MENU ====================*/
+/*==================== SHOW MENU 1 ====================*/
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
         nav = document.getElementById(navId)
