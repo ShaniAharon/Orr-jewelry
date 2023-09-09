@@ -105,3 +105,37 @@ sr.reveal(`.home__data, .home__img,
             .footer__content`, {
     interval: 200
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const email = document.querySelector('.email').value;
+        const subject = document.querySelector('.subject').value;
+        const message = document.querySelector('.message').value;
+        const emailBody = message + '___Email sent from: ' + email;
+
+        const companyMail = 'company@gmail.com'
+
+        const emailUrl = `https://mail.google.com/mail/u/0/?fs=1&to=${companyMail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}&tf=cm`
+        window.open(emailUrl)
+
+        // Clear form inputs
+        document.querySelector('.email').value = '';
+        document.querySelector('.subject').value = '';
+        document.querySelector('.message').value = '';
+    });
+});
+
+// function onHandleSubmit() {
+//     var email = $('.contact-form input[type="email"]').val()
+//     var subj = $('.contact-form input[type="text"]').val()
+//     var msgBody = $('.contact-form textarea').val() + '___Email sent from: ' + email
+//     var emailUrl = `https://mail.google.com/mail/u/0/?fs=1&to=lioramar55@gmail.com&su=${subj}&body=${msgBody}&tf=cm`
+//     window.open(emailUrl)
+//     $('.contact-form input[type="email"]').val('')
+//     $('.contact-form input[type="text"]').val('')
+//     $('.contact-form textarea').val('')
+//   }
